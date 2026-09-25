@@ -7,12 +7,15 @@ import random as rnd
 #pirnt a report
 
 
+#Testing =True
 #define main fuction
 def main():
+#    if Testing:
+#        rnd.seed(7)
     printIntro()
     probA, probB, n = getInput()
     winsA, winsB = simNgames(probA, probB, n)
-    printSummaru(winsA, winsB)
+    printSummary(winsA, winsB)
 
 
 def printIntro():
@@ -61,6 +64,6 @@ def simOneGame(probA, probB):
 def gameOver(a,b):
     return a==15 or b==15
     
-def printSummaru(winsA, winsB):
+def printSummary(winsA, winsB):
     n=winsA+winsB
     print(f"Of {n} games, A won {winsA} games, B won {winsB} games ")
